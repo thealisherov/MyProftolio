@@ -49,31 +49,31 @@ export function Experience() {
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent md:-translate-x-1/2" />
+          {/* Timeline line (desktop only) */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent -translate-x-1/2" />
 
           {/* Timeline items */}
           <div className="flex flex-col gap-8 md:gap-12">
             {experiences.map((exp, index) => (
               <div key={index} className="relative">
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-10 h-10 -translate-x-2.5 md:-translate-x-1/2 mt-1">
+                {/* Timeline dot (desktop only) */}
+                <div className="hidden md:block absolute left-1/2 top-0 w-10 h-10 -translate-x-1/2 mt-1">
                   <div className="w-full h-full rounded-full bg-background border-4 border-primary flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
-                  <div className="group glass p-6 md:p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-1">
+                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
+                  <div className="glass p-5 sm:p-6 md:p-8 rounded-2xl border border-border md:hover:border-primary/50 md:transition-all md:duration-300 md:hover:shadow-2xl md:hover:shadow-primary/10">
                     {/* Header with icon and title */}
                     <div className="flex items-start gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 flex-shrink-0">
                         <Briefcase className="w-5 h-5" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg md:text-xl font-bold leading-tight">{exp.title}</h3>
-                        <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mt-2 bg-muted/50 px-3 py-1.5 rounded-lg w-fit">
+                        <h3 className="text-xl md:text-2xl font-bold leading-snug break-words">{exp.title}</h3>
+                        <div className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground mt-2 bg-muted/50 px-3 py-1.5 rounded-lg">
                           <Calendar className="w-4 h-4 text-primary" />
                           <span>{exp.date}</span>
                         </div>
@@ -81,10 +81,10 @@ export function Experience() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-base text-muted-foreground leading-relaxed mb-5 pl-13 md:pl-0">{exp.description}</p>
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-5">{exp.description}</p>
 
                     {/* Tasks */}
-                    <ul className="flex flex-col gap-2.5 pl-13 md:pl-0">
+                    <ul className="flex flex-col gap-2.5">
                       {exp.tasks.map((task, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground">
                           <ArrowRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
