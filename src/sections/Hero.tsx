@@ -76,13 +76,13 @@ export function Hero() {
           >
             <a
               href="#projects"
-              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
+              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors cursor-pointer"
             >
               View Projects <ArrowRight size={18} />
             </a>
             <a
               href="#contact"
-              className="flex items-center gap-2 glass px-6 py-3 rounded-full font-medium hover:bg-muted transition-colors"
+              className="flex items-center gap-2 glass px-6 py-3 rounded-full font-medium hover:bg-muted transition-colors cursor-pointer"
             >
               Contact Me <Mail size={18} />
             </a>

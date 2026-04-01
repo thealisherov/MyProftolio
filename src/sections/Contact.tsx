@@ -39,7 +39,7 @@ export function Contact() {
             <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
 
             <div className="flex flex-col gap-6">
-              <a href="mailto:azialisherov0826@gmail.com" className="flex items-center gap-4 group">
+              <a href="mailto:azialisherov0826@gmail.com" className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <Mail className="w-5 h-5" />
                 </div>
@@ -49,7 +49,7 @@ export function Contact() {
                 </div>
               </a>
 
-              <a href="tel:+998990315139" className="flex items-center gap-4 group">
+              <a href="tel:+998990315139" className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <Phone className="w-5 h-5" />
                 </div>
@@ -73,13 +73,13 @@ export function Contact() {
             <div className="flex flex-col gap-4 mt-8 pt-8 border-t border-border/50">
               <h4 className="text-lg font-bold">Social Profiles</h4>
               <div className="flex gap-4">
-                <a href="https://www.linkedin.com/in/azizbek-alisherov/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/azizbek-alisherov/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer" aria-label="LinkedIn">
                   <LinkedinIcon className="w-5 h-5" />
                 </a>
-                <a href="https://github.com/thealisherov" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300" aria-label="GitHub">
+                <a href="https://github.com/thealisherov" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer" aria-label="GitHub">
                   <GithubIcon className="w-5 h-5" />
                 </a>
-                <a href="https://t.me/thealisherov" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300" aria-label="Telegram">
+                <a href="https://t.me/thealisherov" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full glass border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer" aria-label="Telegram">
                   <TelegramIcon className="w-5 h-5" />
                 </a>
               </div>
@@ -116,7 +116,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary text-primary-foreground font-bold py-4 rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 mt-2"
+              className="w-full bg-primary text-primary-foreground font-bold py-4 rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 mt-2 cursor-pointer"
             >
               {isSubmitting ? (
                 "Sending..."

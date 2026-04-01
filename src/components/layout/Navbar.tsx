@@ -46,7 +46,7 @@ export function Navbar() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="hover:text-primary transition-colors text-muted-foreground hover:text-foreground"
+                  className="hover:text-primary transition-colors text-muted-foreground hover:text-foreground cursor-pointer"
                 >
                   {link.name}
                 </a>
@@ -57,7 +57,7 @@ export function Navbar() {
           <a
             href="/Azizbek Alisherov.pdf"
             download
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors text-sm"
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors text-sm cursor-pointer"
             aria-label="Download Resume"
           >
             <Download size={16} /> Resume
@@ -65,7 +65,7 @@ export function Navbar() {
 
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-muted transition-colors"
+            className="p-2 rounded-full hover:bg-muted transition-colors cursor-pointer"
             aria-label="Toggle Theme"
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
@@ -76,13 +76,13 @@ export function Navbar() {
         <div className="md:hidden flex items-center gap-4">
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-muted transition-colors"
+            className="p-2 rounded-full hover:bg-muted transition-colors cursor-pointer"
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 -mr-2 text-foreground"
+            className="p-2 -mr-2 text-foreground cursor-pointer"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -103,7 +103,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-medium py-2 border-b border-border/50 hover:text-primary transition-colors"
+                className="text-lg font-medium py-2 border-b border-border/50 hover:text-primary transition-colors cursor-pointer"
               >
                 {link.name}
               </a>

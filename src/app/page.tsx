@@ -26,7 +26,6 @@ export default function Home() {
 
       <footer className="w-full py-8 text-center text-sm text-muted-foreground border-t border-border/50 glass">
         <p>© {new Date().getFullYear()} Azizbek Alisherov. All rights reserved.</p>
-        <p className="mt-2 text-xs opacity-70">Built with Next.js, Tailwind CSS & Three.js</p>
       </footer>
     </main>
   );

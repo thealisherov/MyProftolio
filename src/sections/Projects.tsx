@@ -54,10 +54,10 @@ export function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-4 w-full">
-                    <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 glass py-2 rounded-full flex items-center justify-center gap-2 font-medium hover:bg-primary hover:text-primary-foreground transition-colors" aria-label={`View live demo of ${project.title}`}>
+                    <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 glass py-2 rounded-full flex items-center justify-center gap-2 font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer" aria-label={`View live demo of ${project.title}`}>
                       <ExternalLink size={16} /> Demo
                     </a>
-                    <a href={project.github} target="_blank" rel="noreferrer" className="flex-1 glass py-2 rounded-full flex items-center justify-center gap-2 font-medium hover:bg-muted transition-colors" aria-label={`View source code of ${project.title}`}>
+                    <a href={project.github} target="_blank" rel="noreferrer" className="flex-1 glass py-2 rounded-full flex items-center justify-center gap-2 font-medium hover:bg-muted transition-colors cursor-pointer" aria-label={`View source code of ${project.title}`}>
                       <GithubIcon size={16} /> Code
                     </a>
                   </div>
