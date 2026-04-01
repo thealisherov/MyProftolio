@@ -3,23 +3,17 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, Download } from "lucide-react";
 
 export function Navbar() {
-  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    let isMounted = true;
-    if (isMounted) {
-      setMounted(true);
-    }
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => {
-      isMounted = false;
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -32,10 +26,9 @@ export function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
-  if (!mounted) return null;
-
   return (
     <nav
+      suppressHydrationWarning
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled ? "glass py-4 shadow-sm" : "bg-transparent py-6"
       }`}
@@ -43,7 +36,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 max-w-6xl flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-xl font-bold tracking-tighter hover:opacity-80 transition-opacity">
-          Azizbek.
+          thealisherov
         </a>
 
         {/* Desktop Nav */}
@@ -60,6 +53,15 @@ export function Navbar() {
               </li>
             ))}
           </ul>
+
+          <a
+            href="/Azizbek Alisherov.pdf"
+            download
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors text-sm"
+            aria-label="Download Resume"
+          >
+            <Download size={16} /> Resume
+          </a>
 
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

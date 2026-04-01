@@ -19,15 +19,15 @@ export function Hero() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
-            className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 p-1"
+            className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/20 p-1"
           >
             <div className="w-full h-full rounded-full overflow-hidden bg-muted relative">
               <Image
-                src="/placeholder-user.jpg"
+                src="/Abdulaziz.webp"
                 alt="Azizbek Alisherov"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 128px, 160px"
+                sizes="(max-width: 768px) 192px, 256px"
                 priority
               />
             </div>

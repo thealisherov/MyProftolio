@@ -1,5 +1,5 @@
 import { SectionReveal } from "@/components/ui/SectionReveal";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, ArrowRight } from "lucide-react";
 
 export function Experience() {
   const experiences = [
@@ -40,46 +40,63 @@ export function Experience() {
 
   return (
     <SectionReveal>
-      <section id="experience" className="container mx-auto px-6 max-w-4xl py-24">
+      <section id="experience" className="container mx-auto px-6 max-w-6xl py-24">
         <div className="flex flex-col gap-2 mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Work <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Experience</span>
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full mx-auto mt-2" />
         </div>
 
-        <div className="relative border-l border-primary/20 ml-3 md:ml-6 flex flex-col gap-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 group">
-              <span className="absolute -left-3 top-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center border-2 border-background group-hover:scale-110 transition-transform">
-                <span className="w-2 h-2 rounded-full bg-primary" />
-              </span>
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent md:-translate-x-1/2" />
 
-              <div className="flex flex-col gap-2 glass p-6 rounded-2xl border border-border group-hover:border-primary/30 transition-colors">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                  <h3 className="text-xl md:text-2xl font-bold flex items-center gap-2">
-                    <Briefcase className="w-5 h-5 text-primary" />
-                    {exp.title}
-                  </h3>
-                  <span className="text-sm font-medium text-muted-foreground flex items-center gap-2 bg-muted/50 px-3 py-1 rounded-full w-fit">
-                    <Calendar className="w-4 h-4" />
-                    {exp.date}
-                  </span>
+          {/* Timeline items */}
+          <div className="flex flex-col gap-8 md:gap-12">
+            {experiences.map((exp, index) => (
+              <div key={index} className="relative">
+                {/* Timeline dot */}
+                <div className="absolute left-0 md:left-1/2 top-0 w-10 h-10 -translate-x-2.5 md:-translate-x-1/2 mt-1">
+                  <div className="w-full h-full rounded-full bg-background border-4 border-primary flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                  </div>
                 </div>
 
-                <p className="text-muted-foreground mb-4">{exp.description}</p>
+                {/* Content */}
+                <div className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
+                  <div className="group glass p-6 md:p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-1">
+                    {/* Header with icon and title */}
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all flex-shrink-0">
+                        <Briefcase className="w-5 h-5" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg md:text-xl font-bold leading-tight">{exp.title}</h3>
+                        <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mt-2 bg-muted/50 px-3 py-1.5 rounded-lg w-fit">
+                          <Calendar className="w-4 h-4 text-primary" />
+                          <span>{exp.date}</span>
+                        </div>
+                      </div>
+                    </div>
 
-                <ul className="flex flex-col gap-2">
-                  {exp.tasks.map((task, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
-                      <span className="text-primary font-bold mt-1">•</span>
-                      <span>{task}</span>
-                    </li>
-                  ))}
-                </ul>
+                    {/* Description */}
+                    <p className="text-base text-muted-foreground leading-relaxed mb-5 pl-13 md:pl-0">{exp.description}</p>
+
+                    {/* Tasks */}
+                    <ul className="flex flex-col gap-2.5 pl-13 md:pl-0">
+                      {exp.tasks.map((task, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground">
+                          <ArrowRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>{task}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </SectionReveal>

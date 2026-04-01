@@ -8,7 +8,7 @@ export function About() {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
           <div className="flex-1 w-full max-w-md mx-auto aspect-square relative rounded-2xl overflow-hidden glass border-border shadow-2xl group">
             <Image
-              src="/placeholder-about.jpg"
+              src="/Abdulaziz.webp"
               alt="About Azizbek"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -40,7 +40,7 @@ export function About() {
               </div>
               <div className="flex flex-col gap-1 p-6 glass rounded-2xl border border-border">
                 <span className="text-3xl md:text-4xl font-bold text-foreground">10+</span>
-                <span className="text-sm font-medium text-muted-foreground">Projects Completed</span>
+                <span className="text-sm font-medium text-muted-foreground">Satisfied Clients</span>
               </div>
             </div>
           </div>
