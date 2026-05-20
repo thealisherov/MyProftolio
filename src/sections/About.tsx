@@ -26,7 +26,7 @@ export function About() {
             </div>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I am a motivated Junior Frontend Developer with hands-on experience building responsive and user-friendly web applications.
+              I am a motivated Frontend Developer with hands-on experience building responsive and user-friendly web applications.
             </p>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">

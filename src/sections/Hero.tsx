@@ -43,7 +43,7 @@ export function Hero() {
               Hi, I&apos;m <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Azizbek Alisherov</span>
             </h1>
             <h2 className="text-xl md:text-3xl font-medium text-muted-foreground mt-2 min-h-[40px]">
-              <span className="font-semibold text-foreground">Junior Frontend Developer</span>{" "}
+              <span className="font-semibold text-foreground">Frontend Developer</span>{" "}
               <span className="opacity-80 block md:inline mt-2 md:mt-0">
                 specializing in{" "}
                 <Typewriter
