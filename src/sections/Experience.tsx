@@ -4,6 +4,19 @@ import { Briefcase, Calendar, ArrowRight } from "lucide-react";
 export function Experience() {
   const experiences = [
     {
+      title: "Frontend Developer — Kremslivki (E-commerce Platform)",
+      date: "Aprel 2026 – Present",
+      description: "Developed a comprehensive e-commerce platform for a confectionery store from scratch using Next.js and TypeScript",
+      tasks: [
+        "Built responsive and modern user interface with Tailwind CSS, incorporating dynamic micro-animations for enhanced shopping experience",
+        "Implemented internationalization (i18n) to support multiple languages: Uzbek, Russian, and English",
+        "Developed secure admin panel for managing orders, configuring delivery fees, uploading banners, and managing user details",
+        "Optimized application for SEO using Next.js metadata and implemented performance enhancements for faster load times",
+        "Integrated complex frontend logic including real-time price calculations, advanced cart management, and client-side image compression",
+        "Download (IOS)",
+      ],
+    },
+    {
       title: "Frontend Developer (Self-employed)",
       date: "Oct 2025 – Present",
       description: "Working on enterprise-level web applications with focus on performance and robust architecture.",
